@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description"
+                content="A Simple Spiderman Game in HTML5, CSS3 and Javascript" />
+        <meta name="author" content="Chandula Janith (RedEdge967)" />
+	<title>Spidy! Local Superhero</title>
+	<link rel="shortcut icon" href="images/favicon.png" />
+</head>
+<style type="text/css">
+	html,
+	body {
+		height: 100%;
+		width: 100%;
+		margin: 0;
+		font-size: 0;
+		background: #000;
+	}
+
+	.canvas-wrapper {
+		float: left;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+
+		-webkit-transform: translate(-50%, -50%);
+		-moz-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		-o-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+	}
+
+	.key {
+		margin-left: 60px;
+
+	    height: 30px;
+	    min-width: 20px;
+	    line-height: 30px;
+	    text-align: center;
+	    border: 3px solid rgb(76, 88, 255);;
+	    background: rgb(255, 87, 87);
+	    display: inline-block;
+	    padding: 0 5px;
+		margin-bottom: 3px;
+	    border-radius: 5px;
+	    color: rgb(0, 0, 0);
+	    font-weight: bold;
+	}
+
+	.key.spacebar {
+		padding: 0 40px;
+	}
+
+	.keyboard {
+		margin: 5px 0;
+		font-size: 15px;
+	    /* font-family: Helvetica; */
+		font-family:SpidermanGamePixelFont;
+	    color: rgb(214, 40, 40);
+	}
+
+	.action {
+		margin-right: 15px;
+	}
+
+</style>
+<body>
+	<div class="canvas-wrapper">
+		<div class="keyboard">
+			<div class="key spacebar">Spacebar</div>
+			<span class="action"> Shoot</span>
+
+			<div class="key"><b>←</b></div>
+			<span class="action"> Left</span>
+			<div class="key"><b>→</b></div>
+			<span class="action"> Right</span>
+
+			<div class="key"><b>↑</b></div>
+			<span class="action"> Jump</span>
+		</div>
+
+		<canvas id="canvas"></canvas>
+	</div>
+
+</body>
+<script type="text/javascript" src="spiderman-game.js"></script>
+<script type="text/javascript">
+
+var game = new SpidermanGame({
+	canvas: "#canvas"
+});
+
+game.load();
+
+</script>
+</html>
+
